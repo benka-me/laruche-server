@@ -1,0 +1,29 @@
+name: laruche-server
+pkgname: larsrv
+pkgnamecamel: Larsrv
+repo: github.com/benka-me/laruche-server
+author: benka-me
+port: 8020
+public: false
+license: ""
+description: ""
+keywords: ""
+tag: ""
+devlang: 0
+languages:
+  go:
+    setup:
+      active: true
+      protocbinary: gogoslick
+  javascript:
+    setup:
+      active: true
+      protocbinary: ""
+protosetup:
+  files:
+  - larsrv.proto
+  - rpc-larsrv.proto
+isgateway: false
+deps: []
+cons:
+  - benka-me/laruche-hive

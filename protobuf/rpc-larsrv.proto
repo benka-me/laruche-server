@@ -1,0 +1,20 @@
+syntax = "proto3";
+package larsrv;
+
+option go_package = "github.com/benka-me/laruche-server/go-pkg/larsrv";
+import "larsrv.proto";
+import "github.com/benka-me/laruche/protobuf/laruche.proto";
+
+service Larsrv {
+    rpc PublishBee (laruche.PushBee) returns (laruche.PushBeeRes);
+    rpc PublishHive (laruche.PushHive) returns (laruche.PushHiveRes);
+
+    rpc PrivatizeBee (laruche.PushBee) returns (laruche.PushBeeRes);
+    rpc PrivatizeHive (laruche.PushHive) returns (laruche.PushHiveRes);
+
+    rpc SetBee (laruche.PushBee) returns (laruche.PushBeeRes);
+    rpc SetHive (laruche.PushHive) returns (laruche.PushHiveRes);
+
+    rpc GetBee (laruche.BeeReq) returns (laruche.Bee);
+    rpc GetBees (laruche.BeesReq) returns (laruche.Bees);
+}
